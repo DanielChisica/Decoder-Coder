@@ -62,7 +62,7 @@
   <script src="Scripts/jquery-1.9.1.min.js"></script>
   <script src="Scripts/jquery.signalR-2.4.1.min.js"></script>
   <script src="signalr/hubs"></script>
-  
+   <script src="app/app.js"></script>
     <style type="text/css">
         #Chatbox {
             width: 1175px;
