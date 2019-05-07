@@ -1,9 +1,50 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CoderEncoderApp.aspx.cs"%>
+<%@ Import Namespace="Decoder_CoderApp.Models" %>
 
 <!DOCTYPE html>
 <script runat="server">
 
-    protected void Page_Load(object sender, EventArgs e)
+
+    Coder coder = new Coder();
+
+    string decodedText = "";
+    string textToDecode = "";
+
+
+
+    protected void EncryptButton_Click(object sender, EventArgs e)
+    {
+        coder.FillDictionary();
+        coder.SelectedLetterCoder = keyDropdown.SelectedValue.ToCharArray()[0];
+        decodedText =  coder.Encode(TextField.Text);
+        EncryptedString.Text = decodedText;
+
+    }
+
+    protected void EncryptedString_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void TextField_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void decodeButton_Click(object sender, EventArgs e)
+    {
+        coder.FillDictionary();
+        coder.SelectedLetterDecoder = coder.SelectedLetterCoder = keydropdown2.SelectedValue.ToCharArray()[0];
+        var answer = coder.Decode(encryptedcodes.Text);
+        originalString.Text = answer;
+    }
+
+    protected void encryptedcodes_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+
+    protected void originalString_TextChanged(object sender, EventArgs e)
     {
 
     }
@@ -21,7 +62,7 @@
   <script src="Scripts/jquery-1.9.1.min.js"></script>
   <script src="Scripts/jquery.signalR-2.4.1.min.js"></script>
   <script src="signalr/hubs"></script>
-  <script src="app/app.js"></script>
+  
     <style type="text/css">
         #Chatbox {
             width: 1175px;
@@ -42,7 +83,7 @@
       <h3>Coder</h3>
     <div id="Coder">
       <asp:Label ID="labeltext" runat="server" Text="Text: "></asp:Label>
-      <asp:TextBox ID="TextField" runat="server" size="50"></asp:TextBox>
+      <asp:TextBox ID="TextField" runat="server" size="50" OnTextChanged="TextField_TextChanged"></asp:TextBox>
         <br />
         <br />
       <asp:Label ID="labelkey" runat="server" Text="Key Letter: "></asp:Label>
@@ -77,25 +118,24 @@
         </asp:DropDownList>
         <br />
         <br />
-        <asp:Button ID="EncryptButton" runat="server" Text="Encrypt String"/>
+        <asp:Button ID="EncryptButton" runat="server" Text="Encrypt String" OnClick="EncryptButton_Click"/>
 
         <br />
         <br />
-      <asp:TextBox ID="EncryptedString" runat="server" size="50" Height="85px" Width="434px"></asp:TextBox>
+      <asp:TextBox ID="EncryptedString" runat="server" size="50" Height="85px" Width="434px" OnTextChanged="EncryptedString_TextChanged"></asp:TextBox>
         <br />
         <br />
 
     </div>
     </div>
     <div class="row">
-      <h3>Decoder</h3>
-    <div id="Decoder">
+      <h3>Decoder<div id="Decoder">
       <asp:Label ID="codeslabel" runat="server" Text="Encrypted codes: "></asp:Label>
-      <asp:TextBox ID="encryptedcodes" runat="server" size="50"></asp:TextBox>
+      <asp:TextBox ID="encryptedcodes" runat="server" size="50" OnTextChanged="encryptedcodes_TextChanged"></asp:TextBox>
         <br />
         <br />
       <asp:Label ID="labelkey2" runat="server" Text="Key Letter: "></asp:Label>
-        <asp:DropDownList ID="keydropdown2" runat="server" style="width:200px;">
+        <asp:DropDownList ID="keydropdown2" runat="server" Height="28px" Width="153px">
             <asp:ListItem Value="a"></asp:ListItem>
             <asp:ListItem Value="b"></asp:ListItem>
             <asp:ListItem Value="c"></asp:ListItem>
@@ -126,12 +166,12 @@
         </asp:DropDownList>
         <br />
         <br />
-        <asp:Button ID="decodeButton" runat="server" Text="Decode"/>
+        <asp:Button ID="decodeButton" runat="server" Text="Decode" OnClick="decodeButton_Click" Height="37px" Width="119px"/>
 
         <br />
         <br />
       <asp:Label ID="stringlabel" runat="server" Text="Original String: "></asp:Label>
-      <asp:TextBox ID="originalString" runat="server" size="50"></asp:TextBox>
+      <asp:TextBox ID="originalString" runat="server" size="50" OnTextChanged="originalString_TextChanged"></asp:TextBox>
         <br />
         <br />
 
@@ -171,6 +211,7 @@
         </div>
         </div>
   </div>
+</div>
 </form>
 </body>
 </html>

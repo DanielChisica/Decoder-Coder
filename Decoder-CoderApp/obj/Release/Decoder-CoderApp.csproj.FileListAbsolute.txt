@@ -83,7 +83,8 @@ C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\bin\System.Net.Http.Fo
 C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\bin\System.Web.Http.xml
 C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\bin\System.Web.Http.WebHost.xml
 C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.csproj.CoreCompileInputs.cache
-C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.csproj.CopyComplete
-C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.dll
-C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.pdb
+C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Release\Decoder-CoderApp.csprojAssemblyReference.cache
+C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Release\Decoder-CoderApp.csproj.CoreCompileInputs.cache
+C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Release\Decoder-CoderApp.csproj.CopyComplete
+C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Release\Decoder-CoderApp.dll
+C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Release\Decoder-CoderApp.pdb

@@ -153,6 +153,7 @@
       <DependentUpon>CoderEncoderApp.aspx</DependentUpon>
     </Compile>
     <Compile Include="Hubs\ChatHub.cs" />
+    <Compile Include="Models\Coder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -167,8 +168,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
