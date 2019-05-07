@@ -87,3 +87,4 @@ C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-Code
 C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.csproj.CopyComplete
 C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.dll
 C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.pdb
+C:\Users\Laika\Desktop\Git\Decoder-Coder\Decoder-CoderApp\obj\Debug\Decoder-CoderApp.csprojAssemblyReference.cache
